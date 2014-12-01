@@ -1,0 +1,22 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-color:#003399; width:auto; height:100px;" >
+          <asp:Image ID="logo" runat="server" Height="97px" ImageAlign="Right" ImageUrl="~/Best_Buy_Logo.png" style="margin-left: 0px" Width="215px" />
+        
+    </div>
+        <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

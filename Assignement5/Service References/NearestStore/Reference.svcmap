@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="032b4721-422b-4488-ac27-20c432e9cb1e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar17.fulton.asu.edu/Page4/NearestStore.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NearestStore.wsdl" MetadataType="Wsdl" ID="9a8fdd37-d3d9-4451-bc85-e5d55e0e7c88" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page4/NearestStore.svc?wsdl" />
+    <MetadataFile FileName="NearestStore.xsd" MetadataType="Schema" ID="18ffc9d5-d0ee-4c6e-badf-387ac26c0420" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page4/NearestStore.svc?xsd=xsd1" />
+    <MetadataFile FileName="NearestStore1.xsd" MetadataType="Schema" ID="31616c8c-2477-41b6-a443-e09b3a79a768" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page4/NearestStore.svc?xsd=xsd2" />
+    <MetadataFile FileName="NearestStore2.xsd" MetadataType="Schema" ID="d0c73541-0cf8-4670-ba3c-82d1d23584e8" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page4/NearestStore.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

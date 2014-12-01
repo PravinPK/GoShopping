@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ReviewService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ReviewService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Reviews">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reviews" nillable="true" type="tns:ArrayOfReview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Reviews" nillable="true" type="tns:Reviews" />
+  <xs:complexType name="ArrayOfReview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Review" nillable="true" type="tns:Review" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReview" nillable="true" type="tns:ArrayOfReview" />
+  <xs:complexType name="Review">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rating" type="xs:float" />
+      <xs:element minOccurs="0" name="reviewer" nillable="true" type="tns:ArrayOfReviewer" />
+      <xs:element minOccurs="0" name="sku" type="xs:int" />
+      <xs:element minOccurs="0" name="submissionTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Review" nillable="true" type="tns:Review" />
+  <xs:complexType name="ArrayOfReviewer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Reviewer" nillable="true" type="tns:Reviewer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReviewer" nillable="true" type="tns:ArrayOfReviewer" />
+  <xs:complexType name="Reviewer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Reviewer" nillable="true" type="tns:Reviewer" />
+</xs:schema>

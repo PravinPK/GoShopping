@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ddf6d9e0-5a01-4373-b952-1721764b0157" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar17.fulton.asu.edu/Page8/WeatherSolar.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WeatherSolar.xsd" MetadataType="Schema" ID="fc77b08e-a4fe-48a2-b963-3bbe63eed15d" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/WeatherSolar.svc?xsd=xsd2" />
+    <MetadataFile FileName="WeatherSolar.wsdl" MetadataType="Wsdl" ID="7df15f37-bc78-42c5-bb7c-815dd8cc7917" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/WeatherSolar.svc?wsdl" />
+    <MetadataFile FileName="WeatherSolar1.xsd" MetadataType="Schema" ID="3a12772d-fecb-464a-8a54-33717b3e76fd" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/WeatherSolar.svc?xsd=xsd1" />
+    <MetadataFile FileName="WeatherSolar2.xsd" MetadataType="Schema" ID="48f198f0-2d10-4a20-9b8f-842b171b564d" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/WeatherSolar.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

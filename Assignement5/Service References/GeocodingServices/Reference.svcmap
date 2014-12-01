@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="09f9c99e-72f0-4c98-8e80-e2d8b4b7e395" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar17.fulton.asu.edu/Page8/Geocoding.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Geocoding.xsd" MetadataType="Schema" ID="f9c7c4e5-64d6-4e06-8e03-af29600a9103" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/Geocoding.svc?xsd=xsd1" />
+    <MetadataFile FileName="Geocoding1.xsd" MetadataType="Schema" ID="a2a8b67a-bef2-41f2-bbc1-4a1319d744d8" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/Geocoding.svc?xsd=xsd0" />
+    <MetadataFile FileName="Geocoding.wsdl" MetadataType="Wsdl" ID="ac17e7f7-bfb0-46b5-8a7d-dd24b1ed5e0d" SourceId="1" SourceUrl="http://webstrar17.fulton.asu.edu/Page8/Geocoding.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

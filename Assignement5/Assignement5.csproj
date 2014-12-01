@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F501E4AF-F8DE-4FE6-B672-4240CF021AB0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assignement5</RootNamespace>
+    <AssemblyName>Assignement5</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_data\Users.xml" />
+    <Content Include="App_data\UserSchema.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Best_Buy_Logo.png" />
+    <Content Include="Member_Pages\AdminMoniter.aspx" />
+    <Content Include="Member_Pages\Login.aspx" />
+    <Content Include="Member_Pages\ProductSelection.aspx" />
+    <None Include="Properties\PublishProfiles\Assignment5.pubxml" />
+    <Content Include="Member_Pages\ReviewPage.aspx" />
+    <Content Include="Member_Pages\StoreLocation.aspx" />
+    <None Include="Service References\GeocodingServices\configuration91.svcinfo" />
+    <None Include="Service References\GeocodingServices\configuration.svcinfo" />
+    <None Include="Service References\GeocodingServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\NearestStore\Assignement5.NearestStore.Store.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GeocodingServices\Geocoding.wsdl" />
+    <None Include="Service References\GeocodingServices\Geocoding.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GeocodingServices\Geocoding1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NearestStore\configuration91.svcinfo" />
+    <None Include="Service References\NearestStore\configuration.svcinfo" />
+    <None Include="Service References\NearestStore\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\RecommendedService\Assignement5.RecommendedService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\NearestStore\NearestStore.wsdl" />
+    <None Include="Service References\NearestStore\NearestStore.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NearestStore\NearestStore1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NearestStore\NearestStore2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecommendedService\configuration91.svcinfo" />
+    <None Include="Service References\RecommendedService\configuration.svcinfo" />
+    <None Include="Service References\RecommendedService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ReviewServiceReference\Assignement5.ReviewServiceReference.Reviews.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ReviewServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\ReviewServiceReference\configuration.svcinfo" />
+    <None Include="Service References\ReviewServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WeatherService\configuration91.svcinfo" />
+    <None Include="Service References\WeatherService\configuration.svcinfo" />
+    <None Include="Service References\WeatherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TryIt\DLLHashing.aspx" />
+    <Content Include="User Control\Admin.ascx" />
+    <Content Include="User Control\RecommendedProd.ascx" />
+    <Content Include="User Control\RegisterUser.ascx" />
+    <Content Include="User Control\SignIn.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BestBuy.Master.cs">
+      <DependentUpon>BestBuy.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestBuy.Master.designer.cs">
+      <DependentUpon>BestBuy.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Users.cs" />
+    <Compile Include="Member_Pages\AdminMoniter.aspx.cs">
+      <DependentUpon>AdminMoniter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\AdminMoniter.aspx.designer.cs">
+      <DependentUpon>AdminMoniter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\ProductSelection.aspx.cs">
+      <DependentUpon>ProductSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\ProductSelection.aspx.designer.cs">
+      <DependentUpon>ProductSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\ReviewPage.aspx.cs">
+      <DependentUpon>ReviewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\ReviewPage.aspx.designer.cs">
+      <DependentUpon>ReviewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\StoreLocation.aspx.cs">
+      <DependentUpon>StoreLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\StoreLocation.aspx.designer.cs">
+      <DependentUpon>StoreLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GeocodingServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NearestStore\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RecommendedService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReviewServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WeatherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TryIt\DLLHashing.aspx.cs">
+      <DependentUpon>DLLHashing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TryIt\DLLHashing.aspx.designer.cs">
+      <DependentUpon>DLLHashing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Admin.ascx.cs">
+      <DependentUpon>Admin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Control\Admin.ascx.designer.cs">
+      <DependentUpon>Admin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\RecommendedProd.ascx.cs">
+      <DependentUpon>RecommendedProd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Control\RecommendedProd.ascx.designer.cs">
+      <DependentUpon>RecommendedProd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\RegisterUser.ascx.cs">
+      <DependentUpon>RegisterUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Control\RegisterUser.ascx.designer.cs">
+      <DependentUpon>RegisterUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\SignIn.ascx.cs">
+      <DependentUpon>SignIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Control\SignIn.ascx.designer.cs">
+      <DependentUpon>SignIn.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BestBuy.Master" />
+    <None Include="Service References\RecommendedService\Service1.wsdl" />
+    <None Include="Service References\RecommendedService\TopSellersService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecommendedService\TopSellersService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RecommendedService\TopSellersService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReviewServiceReference\ReviewService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReviewServiceReference\ReviewService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReviewServiceReference\ReviewService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReviewServiceReference\Service1.wsdl" />
+    <None Include="Service References\WeatherService\WeatherSolar.wsdl" />
+    <None Include="Service References\WeatherService\WeatherSolar.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\WeatherSolar1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WeatherService\WeatherSolar2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library_hash_Encrypt\Library_hash_Encrypt.csproj">
+      <Project>{885559be-13b1-46cf-93da-6c30c69ea078}</Project>
+      <Name>Library_hash_Encrypt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GeocodingServices\" />
+    <WCFMetadataStorage Include="Service References\NearestStore\" />
+    <WCFMetadataStorage Include="Service References\RecommendedService\" />
+    <WCFMetadataStorage Include="Service References\ReviewServiceReference\" />
+    <WCFMetadataStorage Include="Service References\WeatherService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49161</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49161/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
