@@ -68,6 +68,7 @@ namespace Assignement5.User_Control
                     TableCell tCell4 = new TableCell();
                     System.Web.UI.WebControls.HyperLink h = new HyperLink();
                     h.Text = "Land on Product";
+                    h.Target = "_blank";
                     h.NavigateUrl = products[i].url;
                     tCell4.Controls.Add(h);
                     tRow1.Cells.Add(tCell4);

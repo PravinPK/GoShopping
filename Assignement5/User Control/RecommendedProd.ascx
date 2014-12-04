@@ -3,9 +3,6 @@
         <ContentTemplate>
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Get Recommended Products"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:Button ID="Button1" runat="server" Font-Bold="True" Text="Get Products" OnClick="Button1_Click" />
-<br />
-<br />
 <asp:Label ID="NoProductsLabel" runat="server"></asp:Label>
 <br />
 <br />
