@@ -1,18 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductSelection.aspx.cs" MasterPageFile="~/BestBuy.Master" Inherits="Assignement5.Member_Pages.ProductSelection" %>
 
-
-
-
-
-
-
-
-
+<%@ Register src="~/User Control/RecommendedProd.ascx" tagname="RecommendedProd" tagprefix="uc1" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
     <asp:Label style="align-self:auto" ID="Greeting" runat="server" Text="Welcome User" ></asp:Label>
     &nbsp;
     <br />
@@ -31,7 +26,10 @@
     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     <asp:Table ID="Table1" runat="server">
     </asp:Table>
-    <asp:Button ID="GotoStoreLocation" runat="server" Text="GotoStoreLocation Sample" OnClick="GotoStoreLocation_Click" />
-    <asp:Button ID="SeeReview" runat="server" Text="See Review Sample" OnClick="SeeReview_Click" />
- </asp:Content>
+    <asp:Button ID="GotoStoreLocation" runat="server" Text="GotoStoreLocation Sample" OnClick="GotoStoreLocation_Click" Width="232px" />
+    <asp:Button ID="SeeReview" runat="server" Text="See Review Sample" OnClick="SeeReview_Click" style="margin-left: 110px" />
+  
+    <uc1:RecommendedProd ID="RecommendedProd1" runat="server" />
+  
+    </asp:Content>
         

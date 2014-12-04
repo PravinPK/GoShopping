@@ -119,7 +119,9 @@ namespace Assignement5.Member_Pages
 
                     Button newButton = new Button();
                     newButton.Text = "Add To Cart";
+                    newButton.OnClientClick = "AddcartClient()";
                     newButton.Click += delegate(object sender2, EventArgs e2)
+                        
                     {
                         Session["cartproduct"] = productList[i];
                         Response.Redirect("~/Member_Pages/StoreLocation.aspx");
