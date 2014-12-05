@@ -22,8 +22,16 @@ namespace Assignement5.User_Control
             {
                 if (SU_username.Text == "" || SU_pass.Text == "" || SU_repass.Text == "" || SU_firstname.Text == "" || SU_Address.Text == "" || SU_City.Text == "" || SU_phone.Text == "" || SU_EmailID.Text == "")
                 {
-                    SU_result.Text = "Please Enter all fields";
-                    SU_result.ForeColor = System.Drawing.Color.Red;
+                    if (!(SU_pass.Text == SU_repass.Text))
+                    {
+                        SU_result.Text = "Password Mismatch";
+                        SU_result.ForeColor = System.Drawing.Color.Red;
+                    }
+                    else
+                    {
+                        SU_result.Text = "Please Enter all fields";
+                        SU_result.ForeColor = System.Drawing.Color.Red;
+                    }
                 }
                 else
                 {
@@ -56,6 +64,8 @@ namespace Assignement5.User_Control
                     XmlElement City = Usersdoc.CreateElement("City");
                     XmlElement PhoneNumber = Usersdoc.CreateElement("PhoneNumber");
                     XmlElement EmailID = Usersdoc.CreateElement("Email");
+                    XmlElement role = Usersdoc.CreateElement("Role");
+
                     UserName.InnerText = SU_username.Text;
                     Password.InnerText = secretPassword;
                     FirstName.InnerText = SU_firstname.Text;
@@ -63,6 +73,7 @@ namespace Assignement5.User_Control
                     City.InnerText = SU_City.Text;
                     PhoneNumber.InnerText = SU_phone.Text;
                     EmailID.InnerText = SU_EmailID.Text;
+                    role.InnerText = "Member";
                     singleuser.AppendChild(UserName);
                     singleuser.AppendChild(Password);
                     singleuser.AppendChild(FirstName);
@@ -70,10 +81,11 @@ namespace Assignement5.User_Control
                     singleuser.AppendChild(City);
                     singleuser.AppendChild(PhoneNumber);
                     singleuser.AppendChild(EmailID);
+                    singleuser.AppendChild(role);
                     rootnote.AppendChild(singleuser);
                     Usersdoc.Save(fLocation);
 
-                    Users newUser = new Users(SU_username.Text, secretPassword, SU_firstname.Text, SU_Address.Text, SU_City.Text, SU_phone.Text, SU_EmailID.Text);
+                    Users newUser = new Users(SU_username.Text, secretPassword, SU_firstname.Text, SU_Address.Text, SU_City.Text, SU_phone.Text, SU_EmailID.Text,"Member");
                     string catalogKey = "Users" + SU_username.Text;  // Form the index key for next session spot
                     Session[catalogKey] = newUser; // Add an object into session state 
                     HttpCookie storeCookies = new HttpCookie("BestBuyCookies");

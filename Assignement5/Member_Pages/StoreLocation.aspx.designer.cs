@@ -13,6 +13,15 @@ namespace Assignement5.Member_Pages {
     public partial class StoreLocation {
         
         /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+        
+        /// <summary>
         /// CartProdct control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,24 @@ namespace Assignement5.Member_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label CartProdct;
+        
+        /// <summary>
+        /// RadioButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        
+        /// <summary>
+        /// RadioButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
         
         /// <summary>
         /// Label2 control.
@@ -67,7 +94,7 @@ namespace Assignement5.Member_Pages {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Buy Clicked control.
+        /// BuyClicked control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

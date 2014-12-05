@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Assignement5.Classes;
 
 namespace Assignement5.Member_Pages
 {
@@ -93,6 +94,26 @@ namespace Assignement5.Member_Pages
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Member_Pages/ProductSelection.aspx");
+        }
+
+        protected void SignOutClick_Click(object sender, EventArgs e)
+        {
+                Users currentUser;
+                HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
+                if (Session.Count != 0)
+                {
+                    if (!(storeCookies["Name"] == ""))
+                    {
+                        string catalogKey = "Users" + storeCookies["Name"];
+                        currentUser = (Users)Session[catalogKey];
+                        if(currentUser!=null)
+                        {
+                            Session["catalogKey"] = null;
+                        }
+                    }
+                }
+            Session["cartproduct"] = null;
+            Response.Redirect("~/Member_Pages/Login.aspx");
         }
     }
 }

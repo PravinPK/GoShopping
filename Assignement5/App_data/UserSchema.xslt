@@ -24,6 +24,9 @@
             <td>
               <b>Phone</b>
             </td>
+            <td>
+              <b>Role</b>
+            </td>
           </tr>
           <xsl:for-each select="Users/User">
             <xsl:sort select="UserName" />
@@ -46,7 +49,10 @@
                 <xsl:value-of select="Email"/>
               </td>
               <td>
-                <xsl:value-of select="Phone"/>
+                <xsl:value-of select="PhoneNumber"/>
+              </td>
+              <td>
+                <xsl:value-of select="Role"/>
               </td>
             </tr>
           </xsl:for-each>

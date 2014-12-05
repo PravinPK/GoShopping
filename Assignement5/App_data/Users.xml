@@ -9,32 +9,46 @@
     <City>Tempe</City>
     <PhoneNumber>357-3452-4344</PhoneNumber>
     <Email>sample@asu</Email>
+    <Role>Member</Role>
   </User>
   <User>
-    <UserName>a</UserName>
-    <Password>XJo0a1XXVx9/IEdcB6EDOnRdyHE1NTxTnFZINVtI00mTPo38W2HgGqJPoKWc6ktJkJJ4Zf+OPgzcqoPxdegXGA==</Password>
-    <FirstName>a</FirstName>
-    <Address>Arizona State University</Address>
-    <City>Tempe</City>
-    <PhoneNumber>357-3452-4344</PhoneNumber>
-    <Email>sample@asu</Email>
-  </User>
-  <User>
-    <UserName>q</UserName>
+    <UserName>Staff2</UserName>
     <Password>i8GXREvZFvGZWTfoLRY1OX74vKu1r6OVpT/62KXbVDfyIZ+yxexbuJQ/08UbyzU0GTe12TFVgjGo3Q/omirSMg==</Password>
-    <FirstName>q</FirstName>
+    <FirstName>Staff</FirstName>
     <Address>Arizona State University</Address>
     <City>Tempe</City>
     <PhoneNumber>357-3452-4344</PhoneNumber>
     <Email>sample@asu</Email>
+    <Role>Staff</Role>
   </User>
   <User>
-    <UserName>m</UserName>
-    <Password>5d8uodqfDXK9eGDDUTmfSNIxe/jPEav/W5WhZYmxCku5OuZqYMKOn7erQ0dhDjXf+VsW5xjrnDqymvsRPL6b3Q==</Password>
-    <FirstName>m</FirstName>
+    <UserName>s2</UserName>
+    <Password>P8pg7du5eGlZe9Bgwo15VJqM0xEJMaFToUef/3bRcqTm+d/sYYQIJFTizO46JKHTYDHDnLf3alQVdGOrYkZMMg==</Password>
+    <FirstName>s2</FirstName>
     <Address>Arizona State University</Address>
     <City>Tempe</City>
     <PhoneNumber>357-3452-4344</PhoneNumber>
     <Email>sample@asu</Email>
+    <Role>Staff</Role>
+  </User>
+  <User>
+    <UserName>p</UserName>
+    <Password>8PDKHpVOZxQ+L/KWLJkgRcA8MCdl/wIOznHt4Em9/avL42LxsKwLC8d1nPozxllF0NDPQKT4wqL21OQTMcetGg==</Password>
+    <FirstName>p</FirstName>
+    <Address>Arizona State University</Address>
+    <City>Tempe</City>
+    <PhoneNumber>357-3452-4344</PhoneNumber>
+    <Email>sample@asu</Email>
+    <Role>Member</Role>
+  </User>
+  <User>
+    <UserName>l</UserName>
+    <Password>xwxCR+uw3yODhwrKqS6sOuOlwTLxPQCzbT4V5xWamQPvQzlaNpkY6m2X8WAQ0Hq33dxkyMW2KIJ94RAO3v2rIw==</Password>
+    <FirstName>l</FirstName>
+    <Address>Arizona State University</Address>
+    <City>Tempe</City>
+    <PhoneNumber>357-3452-4344</PhoneNumber>
+    <Email>sample@asu</Email>
+    <Role>Staff</Role>
   </User>
 </Users>

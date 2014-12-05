@@ -14,7 +14,8 @@ namespace Assignement5.Classes
         public string _City;
         public string _PhoneNumber;
         public string _EmailID;
-        public Users(string UserName, string Password, string FirstName, string Address, string City, string PhoneNumber, string EmailID)
+        public string _role;
+        public Users(string UserName, string Password, string FirstName, string Address, string City, string PhoneNumber, string EmailID, string role)
 	{	
         _UserName = UserName;
         _Password = Password;
@@ -23,6 +24,8 @@ namespace Assignement5.Classes
         _City = City;
         _PhoneNumber = PhoneNumber;
         _EmailID = EmailID;
+        _role=role;
+       
 
     }
 

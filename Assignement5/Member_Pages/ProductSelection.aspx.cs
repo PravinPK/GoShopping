@@ -18,6 +18,7 @@ namespace Assignement5.Member_Pages
         List<Product> productList;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Staffdiscount.Visible = false;
             HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
             if ((storeCookies == null) || (storeCookies["Name"] == ""))
             {
@@ -26,13 +27,30 @@ namespace Assignement5.Member_Pages
             else
             {
                 Greeting.Text = "Welcome, " + storeCookies["Name"];
+                
+                if (Session.Count != 0)
+                {
+                    if (!(storeCookies["Name"] == ""))
+                    {
+                        Users currentUser;
+                        string catalogKey = "Users" + storeCookies["Name"];
+                        currentUser = (Users)Session[catalogKey];
+                        if (currentUser != null)
+                        {
+                            if(currentUser._role=="Staff")
+                            {
+                                Staffdiscount.Visible=true;
+                            }
+
+                        }
+                    }
+                }
             }
         }
 
         protected void btnShowDetails_Click(object sender, EventArgs e)
         {
             panelshowUserDetails.Visible = !panelshowUserDetails.Visible;
-            
             try
             {
                 Users currentUser;
@@ -45,7 +63,7 @@ namespace Assignement5.Member_Pages
                         currentUser = (Users)Session[catalogKey];
                         if (currentUser != null)
                         {
-                            lblUserDetail.Text = currentUser._FirstName + "<br />" + currentUser._EmailID + "<br />" + currentUser._PhoneNumber + "<br />" + currentUser._Address + "<br />" + currentUser._City + "<br />" + currentUser._Password+ "<br />" ;
+                            lblUserDetail.Text = currentUser._FirstName + "<br />" + currentUser._EmailID + "<br />" + currentUser._PhoneNumber + "<br />" + currentUser._Address + "<br />" + currentUser._City + "<br />" + currentUser._Password+ "<br />"+ currentUser._role ;
                         }
                     }
                 }
@@ -162,6 +180,26 @@ namespace Assignement5.Member_Pages
             sampleProd.productId = 1722009;
             Session["Reviewproduct"] = sampleProd;
             Response.Redirect("~/Member_Pages/ReviewPage.aspx");
+        }
+
+        protected void SignOutClick_Click(object sender, EventArgs e)
+        {
+            Users currentUser;
+            HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
+            if (Session.Count != 0)
+            {
+                if (!(storeCookies["Name"] == ""))
+                {
+                    string catalogKey = "Users" + storeCookies["Name"];
+                    currentUser = (Users)Session[catalogKey];
+                    if (currentUser != null)
+                    {
+                        Session["catalogKey"] = null;
+                    }
+                }
+            }
+            Session["cartproduct"] = null;
+            Response.Redirect("~/Member_Pages/Login.aspx");
         }
 
     }
