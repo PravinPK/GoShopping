@@ -13,40 +13,40 @@ namespace Assignement5.Member_Pages {
     public partial class StoreLocation {
         
         /// <summary>
-        /// Button2 control.
+        /// GridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.GridView GridView;
         
         /// <summary>
-        /// CartProdct control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CartProdct;
+        protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// RadioButton1 control.
+        /// totalPriceLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.Label totalPriceLabel;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// NoItemsLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.Label NoItemsLabel;
         
         /// <summary>
         /// Label2 control.

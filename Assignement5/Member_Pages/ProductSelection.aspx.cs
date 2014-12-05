@@ -18,7 +18,6 @@ namespace Assignement5.Member_Pages
         List<Product> productList;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Staffdiscount.Visible = false;
             HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
             if ((storeCookies == null) || (storeCookies["Name"] == ""))
             {
@@ -27,30 +26,13 @@ namespace Assignement5.Member_Pages
             else
             {
                 Greeting.Text = "Welcome, " + storeCookies["Name"];
-                
-                if (Session.Count != 0)
-                {
-                    if (!(storeCookies["Name"] == ""))
-                    {
-                        Users currentUser;
-                        string catalogKey = "Users" + storeCookies["Name"];
-                        currentUser = (Users)Session[catalogKey];
-                        if (currentUser != null)
-                        {
-                            if(currentUser._role=="Staff")
-                            {
-                                Staffdiscount.Visible=true;
-                            }
-
-                        }
-                    }
-                }
             }
         }
 
         protected void btnShowDetails_Click(object sender, EventArgs e)
         {
             panelshowUserDetails.Visible = !panelshowUserDetails.Visible;
+            
             try
             {
                 Users currentUser;
@@ -63,7 +45,7 @@ namespace Assignement5.Member_Pages
                         currentUser = (Users)Session[catalogKey];
                         if (currentUser != null)
                         {
-                            lblUserDetail.Text = currentUser._FirstName + "<br />" + currentUser._EmailID + "<br />" + currentUser._PhoneNumber + "<br />" + currentUser._Address + "<br />" + currentUser._City + "<br />" + currentUser._Password+ "<br />"+ currentUser._role ;
+                            lblUserDetail.Text = currentUser._FirstName + "<br />" + currentUser._EmailID + "<br />" + currentUser._PhoneNumber + "<br />" + currentUser._Address + "<br />" + currentUser._City + "<br />" + currentUser._Password+ "<br />" ;
                         }
                     }
                 }
@@ -84,7 +66,7 @@ namespace Assignement5.Member_Pages
 
 
 
-            decimal value; 
+            //decimal value; 
 
             if (TextBox1.Text == "")
             {
@@ -137,13 +119,13 @@ namespace Assignement5.Member_Pages
 
                     Button newButton = new Button();
                     newButton.Text = "Add To Cart";
-                    newButton.OnClientClick = "AddcartClient()";
-                    newButton.Click += delegate(object sender2, EventArgs e2)
+                    newButton.OnClientClick = "return AddToCartClient('" + HttpUtility.HtmlEncode(productList[i].name) + "','" + HttpUtility.HtmlEncode(productList[i].salePrice) + "')";
+                    //newButton.Click += delegate(object sender2, EventArgs e2)
                         
-                    {
-                        Session["cartproduct"] = productList[i];
-                        Response.Redirect("~/Member_Pages/StoreLocation.aspx");
-                    };
+                    //{
+                    //    Session["cartproduct"] = productList[i];
+                    //    Response.Redirect("~/Member_Pages/StoreLocation.aspx");
+                    //};
                     TableCell tbcell = new TableCell();
                     tbcell.Controls.Add(newButton);
                     row1.Cells.Add(tbcell);
@@ -182,24 +164,10 @@ namespace Assignement5.Member_Pages
             Response.Redirect("~/Member_Pages/ReviewPage.aspx");
         }
 
-        protected void SignOutClick_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            Users currentUser;
-            HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
-            if (Session.Count != 0)
-            {
-                if (!(storeCookies["Name"] == ""))
-                {
-                    string catalogKey = "Users" + storeCookies["Name"];
-                    currentUser = (Users)Session[catalogKey];
-                    if (currentUser != null)
-                    {
-                        Session["catalogKey"] = null;
-                    }
-                }
-            }
-            Session["cartproduct"] = null;
-            Response.Redirect("~/Member_Pages/Login.aspx");
+            Session["Products"] = "{ \"products\":[" + products.Value + "]}";
+            Response.Redirect("StoreLocation.aspx");
         }
 
     }
