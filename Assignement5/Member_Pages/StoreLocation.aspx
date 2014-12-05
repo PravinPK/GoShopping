@@ -36,12 +36,15 @@
     </script>
 
 
-
-    <h3>Store Location</h3>
-    <asp:Label ID="CartProdct" runat="server" Text=""></asp:Label>
-
-&nbsp;is Added to the Cart<br />
+    <h3>Selected Products</h3>
+    <asp:GridView ID="GridView" runat="server">
+    </asp:GridView>
+    <asp:Label ID="Label4" runat="server" Text="Total Price :"></asp:Label>
+&nbsp;<asp:Label ID="totalPriceLabel" runat="server"></asp:Label>
     <br />
+    <asp:Label ID="NoItemsLabel" runat="server"></asp:Label>
+    <br />
+    <h3>Store Location</h3>
     <h3>Store Pick Up? Check Your Nearest Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buy It Online<br /></h3>
     Provide your ZipCode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="Label2" runat="server" Text="CreditCard No"></asp:Label>
@@ -52,7 +55,7 @@
         <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
     </p>
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" Width="127px" />
-    <asp:Button ID="BuyClicked" runat="server" style="margin-left: 750px" Text="Buy" />
+    <asp:Button ID="BuyClicked" runat="server" style="margin-left: 750px" Text="Buy" OnClick="BuyClicked_Click" />
     <br />
     <br />
     <asp:Label ID="Label1" runat="server"></asp:Label>

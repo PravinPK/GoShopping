@@ -4,6 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Data;
+
 
 namespace Assignement5.Member_Pages
 {
@@ -11,8 +16,65 @@ namespace Assignement5.Member_Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Product prod = (Product)Session["cartproduct"];
-            CartProdct.Text = prod.name;
+            DataContractJsonSerializerSettings settings = new DataContractJsonSerializerSettings();
+            settings.UseSimpleDictionaryFormat = true;
+
+            if (Session["Products"] != null)
+            {
+                string items = Session["Products"].ToString();
+                string selectedItems = HttpUtility.UrlDecode(items, System.Text.Encoding.Default);
+                byte[] cart = System.Text.Encoding.ASCII.GetBytes(selectedItems);
+                MemoryStream ms = new MemoryStream(cart);
+
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(ProductCart), settings);
+                ProductCart selectedProducts = (ProductCart)serializer.ReadObject(ms);
+
+                DataTable table = new DataTable();
+
+                DataColumn column1 = new DataColumn("Name");
+                DataColumn column2 = new DataColumn("Price");
+
+
+                column1.DataType = System.Type.GetType("System.String");
+                column2.DataType = System.Type.GetType("System.String");
+
+                table.Columns.Add(column1);
+                table.Columns.Add(column2);
+                double totalPrice = 0;
+
+                foreach (SelectedProduct product in selectedProducts.Products)
+                {
+
+                    DataRow row = table.NewRow();
+                    row[column1] = product.Name;
+                    row[column2] = product.Price;
+                    totalPrice += Convert.ToDouble(product.Price);
+                    table.Rows.Add(row);
+                }
+                GridView.DataSource = table;
+                GridView.DataBind();
+
+                totalPriceLabel.Text = totalPrice.ToString();
+                BuyClicked.Visible = true;
+                Button1.Visible = true;
+            }
+            else
+            {
+                GridView.DataSource = null;
+                GridView.DataBind();
+                totalPriceLabel.Text = "0.0";
+                NoItemsLabel.Text = "No products added to cart";
+                BuyClicked.Visible = false;
+                Button1.Visible = false;
+            }
+
+            
+
+
+
+
+            //Product prod = (Product)Session["cartproduct"];
+            //CartProdct.Text = prod.name;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -103,7 +165,7 @@ namespace Assignement5.Member_Pages
                         String location = geoclient.GetlocationWithAddress(stores[i].address, "", stores[i].city, stores[i].region, TextBox1.Text);
                         if (location == "Address Not found")
                         {
-                          
+
                         }
                         else
                         {
@@ -129,6 +191,51 @@ namespace Assignement5.Member_Pages
             }
         }
 
+        protected void BuyClicked_Click(object sender, EventArgs e)
+        {
+          
+            GridView.DataSource = null;
+            GridView.DataBind();
+            Session["Products"] = null;
+            Response.Redirect("ProductSelection.aspx");
+        
+        
+        }
+    }
+
+    [DataContract]
+    public class SelectedProduct
+    {
+        [DataMember]
+        private string name;
+        [DataMember]
+        private string price;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        
+        public string Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+    }
+
+
+    [DataContract]
+    public class ProductCart
+    {
+        [DataMember]
+        private List<SelectedProduct> products;
+
+        public List<SelectedProduct> Products
+        {
+            get { return products; }
+            set { products = value; }
+        }
 
     }
 }

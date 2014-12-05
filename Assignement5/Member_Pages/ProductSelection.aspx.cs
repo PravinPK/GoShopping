@@ -66,7 +66,7 @@ namespace Assignement5.Member_Pages
 
 
 
-            decimal value; 
+            //decimal value; 
 
             if (TextBox1.Text == "")
             {
@@ -119,13 +119,13 @@ namespace Assignement5.Member_Pages
 
                     Button newButton = new Button();
                     newButton.Text = "Add To Cart";
-                    newButton.OnClientClick = "AddcartClient()";
-                    newButton.Click += delegate(object sender2, EventArgs e2)
+                    newButton.OnClientClick = "return AddToCartClient('" + HttpUtility.HtmlEncode(productList[i].name) + "','" + HttpUtility.HtmlEncode(productList[i].salePrice) + "')";
+                    //newButton.Click += delegate(object sender2, EventArgs e2)
                         
-                    {
-                        Session["cartproduct"] = productList[i];
-                        Response.Redirect("~/Member_Pages/StoreLocation.aspx");
-                    };
+                    //{
+                    //    Session["cartproduct"] = productList[i];
+                    //    Response.Redirect("~/Member_Pages/StoreLocation.aspx");
+                    //};
                     TableCell tbcell = new TableCell();
                     tbcell.Controls.Add(newButton);
                     row1.Cells.Add(tbcell);
@@ -162,6 +162,12 @@ namespace Assignement5.Member_Pages
             sampleProd.productId = 1722009;
             Session["Reviewproduct"] = sampleProd;
             Response.Redirect("~/Member_Pages/ReviewPage.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["Products"] = "{ \"products\":[" + products.Value + "]}";
+            Response.Redirect("StoreLocation.aspx");
         }
 
     }

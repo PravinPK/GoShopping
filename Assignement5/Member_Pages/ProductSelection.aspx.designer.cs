@@ -76,6 +76,15 @@ namespace Assignement5.Member_Pages {
         protected global::System.Web.UI.WebControls.Button btnProductSearch;
         
         /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -92,6 +101,15 @@ namespace Assignement5.Member_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table Table1;
+        
+        /// <summary>
+        /// products control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField products;
         
         /// <summary>
         /// GotoStoreLocation control.
