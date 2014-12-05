@@ -90,10 +90,14 @@ namespace Assignement5.Member_Pages
 
                     TableRow row1 = new TableRow();
                     Table1.Rows.Add(row1);
-                    
-                    TableCell cell = new TableCell();
-                    row1.Cells.Add(cell);
-                    cell.Text = string.Format("<img src='{0}' />", productList[i].image);
+
+                    if (productList[i].image!=null)
+                    {
+
+                        TableCell cell = new TableCell();
+                        row1.Cells.Add(cell);
+                        cell.Text = string.Format("<img src='{0}' />", productList[i].image);
+                    }
 
                     TableCell cell1 = new TableCell();
                     row1.Cells.Add(cell1);
@@ -169,7 +173,25 @@ namespace Assignement5.Member_Pages
             Session["Products"] = "{ \"products\":[" + products.Value + "]}";
             Response.Redirect("StoreLocation.aspx");
         }
-
+        protected void SignOutClick_Click(object sender, EventArgs e)
+        {
+            Users currentUser;
+            HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
+            if (Session.Count != 0)
+            {
+                if (!(storeCookies["Name"] == ""))
+                {
+                    string catalogKey = "Users" + storeCookies["Name"];
+                    currentUser = (Users)Session[catalogKey];
+                    if (currentUser != null)
+                    {
+                        Session["catalogKey"] = null;
+                    }
+                }
+            }
+            Session["cartproduct"] = null;
+            Response.Redirect("~/Member_Pages/Login.aspx");
+        }
     }
 }
 

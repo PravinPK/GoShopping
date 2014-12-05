@@ -8,6 +8,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Data;
+using Assignement5.Classes;
 
 
 namespace Assignement5.Member_Pages
@@ -29,43 +30,47 @@ namespace Assignement5.Member_Pages
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(ProductCart), settings);
                 ProductCart selectedProducts = (ProductCart)serializer.ReadObject(ms);
 
-                DataTable table = new DataTable();
-
-                DataColumn column1 = new DataColumn("Name");
-                DataColumn column2 = new DataColumn("Price");
-
-
-                column1.DataType = System.Type.GetType("System.String");
-                column2.DataType = System.Type.GetType("System.String");
-
-                table.Columns.Add(column1);
-                table.Columns.Add(column2);
-                double totalPrice = 0;
-
-                foreach (SelectedProduct product in selectedProducts.Products)
+                if (selectedProducts.Products.Count > 0)
                 {
 
-                    DataRow row = table.NewRow();
-                    row[column1] = product.Name;
-                    row[column2] = product.Price;
-                    totalPrice += Convert.ToDouble(product.Price);
-                    table.Rows.Add(row);
-                }
-                GridView.DataSource = table;
-                GridView.DataBind();
+                    DataTable table = new DataTable();
 
-                totalPriceLabel.Text = totalPrice.ToString();
-                BuyClicked.Visible = true;
-                Button1.Visible = true;
-            }
-            else
-            {
-                GridView.DataSource = null;
-                GridView.DataBind();
-                totalPriceLabel.Text = "0.0";
-                NoItemsLabel.Text = "No products added to cart";
-                BuyClicked.Visible = false;
-                Button1.Visible = false;
+                    DataColumn column1 = new DataColumn("Name");
+                    DataColumn column2 = new DataColumn("Price");
+
+
+                    column1.DataType = System.Type.GetType("System.String");
+                    column2.DataType = System.Type.GetType("System.String");
+
+                    table.Columns.Add(column1);
+                    table.Columns.Add(column2);
+                    double totalPrice = 0;
+
+                    foreach (SelectedProduct product in selectedProducts.Products)
+                    {
+
+                        DataRow row = table.NewRow();
+                        row[column1] = product.Name;
+                        row[column2] = product.Price;
+                        totalPrice += Convert.ToDouble(product.Price);
+                        table.Rows.Add(row);
+                    }
+                    GridView.DataSource = table;
+                    GridView.DataBind();
+
+                    totalPriceLabel.Text = totalPrice.ToString();
+                    BuyClicked.Visible = true;
+                    Button1.Visible = true;
+                }
+                else
+                {
+                    GridView.DataSource = null;
+                    GridView.DataBind();
+                    totalPriceLabel.Text = "0.0";
+                    NoItemsLabel.Text = "No products added to cart";
+                    BuyClicked.Visible = false;
+                    Button1.Visible = false;
+                }
             }
 
             
@@ -200,6 +205,26 @@ namespace Assignement5.Member_Pages
             Response.Redirect("ProductSelection.aspx");
         
         
+        }
+
+        protected void SignOutClick_Click(object sender, EventArgs e)
+        {
+            Users currentUser;
+            HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
+            if (Session.Count != 0)
+            {
+                if (!(storeCookies["Name"] == ""))
+                {
+                    string catalogKey = "Users" + storeCookies["Name"];
+                    currentUser = (Users)Session[catalogKey];
+                    if (currentUser != null)
+                    {
+                        Session["catalogKey"] = null;
+                    }
+                }
+            }
+            Session["cartproduct"] = null;
+            Response.Redirect("~/Member_Pages/Login.aspx");
         }
     }
 

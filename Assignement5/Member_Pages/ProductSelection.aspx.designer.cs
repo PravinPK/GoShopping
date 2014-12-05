@@ -22,15 +22,6 @@ namespace Assignement5.Member_Pages {
         protected global::System.Web.UI.ScriptManager ScriptManager2;
         
         /// <summary>
-        /// SignOutClick control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SignOutClick;
-        
-        /// <summary>
         /// Greeting control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace Assignement5.Member_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Greeting;
+        
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// btnShowDetails control.
@@ -65,15 +65,6 @@ namespace Assignement5.Member_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUserDetail;
-        
-        /// <summary>
-        /// Staffdiscount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Staffdiscount;
         
         /// <summary>
         /// TextBox1 control.
