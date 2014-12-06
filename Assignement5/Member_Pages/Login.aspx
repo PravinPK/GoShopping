@@ -51,7 +51,10 @@
             </asp:Panel>
                 <asp:Panel runat="server" ID="StaffDiv" Visible="false">
                 <Staff:Login3 runat="server" />
-            </asp:Panel>
+                    <br />
+                    Sample Login Details<br />
+                    <br />
+                    Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username&nbsp;&nbsp;&nbsp;&nbsp; password<br /> Member&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; user<br /> Staff&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Staff123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; staff<br /> Admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSE44558ta!</asp:Panel>
 
         </ContentTemplate>
     </asp:UpdatePanel>

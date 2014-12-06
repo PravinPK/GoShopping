@@ -22,6 +22,15 @@ namespace Assignement5.Member_Pages {
         protected global::System.Web.UI.ScriptManager ScriptManager2;
         
         /// <summary>
+        /// Button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button3;
+        
+        /// <summary>
         /// Greeting control.
         /// </summary>
         /// <remarks>
@@ -29,15 +38,6 @@ namespace Assignement5.Member_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Greeting;
-        
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
         /// btnShowDetails control.
@@ -119,24 +119,6 @@ namespace Assignement5.Member_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField products;
-        
-        /// <summary>
-        /// GotoStoreLocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GotoStoreLocation;
-        
-        /// <summary>
-        /// SeeReview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SeeReview;
         
         /// <summary>
         /// RecommendedProd1 control.

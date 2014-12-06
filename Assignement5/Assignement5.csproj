@@ -65,6 +65,7 @@
     </Content>
     <Content Include="Best_Buy_Logo.png" />
     <Content Include="Member_Pages\AdminMoniter.aspx" />
+    <Content Include="Member_Pages\FinalPage.aspx" />
     <Content Include="Member_Pages\Login.aspx" />
     <Content Include="Member_Pages\ProductSelection.aspx" />
     <None Include="Properties\PublishProfiles\Assignment5.pubxml" />
@@ -151,6 +152,13 @@
     </Compile>
     <Compile Include="Member_Pages\AdminMoniter.aspx.designer.cs">
       <DependentUpon>AdminMoniter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\FinalPage.aspx.cs">
+      <DependentUpon>FinalPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\FinalPage.aspx.designer.cs">
+      <DependentUpon>FinalPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Member_Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

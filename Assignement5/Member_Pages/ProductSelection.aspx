@@ -17,17 +17,16 @@
         }
     </script>
      <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
+     <asp:Panel HorizontalAlign="Right" runat="server"> <asp:Button ID="Button3" runat="server" style="align-self:auto;" Text="Sign Out" OnClick="SignOutClick_Click" /></asp:Panel>
     <asp:Label style="align-self:auto" ID="Greeting" runat="server" Text="Welcome User" ></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <asp:Panel HorizontalAlign="Right" runat="server"> <asp:Button ID="Button2" runat="server" style="align-self:auto;" Text="Sign Out" OnClick="SignOutClick_Click" /></asp:Panel>
+    
     <br />
     <asp:Button ID="btnShowDetails" runat="server" Text="Show User Details" OnClick="btnShowDetails_Click" />
     <asp:Panel ID="panelshowUserDetails" runat="server" Visible="False">
         <asp:Label ID="lblUserDetail" runat="server" Text="Label"></asp:Label>
     </asp:Panel>
-    <br />
-  
-    <br />
+
     <h2>Search Products</h2>
     <asp:TextBox ID="TextBox1" runat="server" Width="846px"></asp:TextBox>
     <asp:Button ID="btnProductSearch" runat="server" style="margin-left: 87px" Text="Search" Width="114px" OnClick="btnProductSearch_Click" />
@@ -38,9 +37,7 @@
     <asp:Table ID="Table1" runat="server">
     </asp:Table>
     <asp:HiddenField ID="products" runat="server" />
-    <br />
-    <asp:Button ID="GotoStoreLocation" runat="server" Text="GotoStoreLocation Sample" OnClick="GotoStoreLocation_Click" Width="232px" />
-    <asp:Button ID="SeeReview" runat="server" Text="See Review Sample" OnClick="SeeReview_Click" style="margin-left: 110px" />
+
     <h2>Here are a few Recommended Products for You</h2>
     <uc1:RecommendedProd ID="RecommendedProd1" runat="server" />
   

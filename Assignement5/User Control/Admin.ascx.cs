@@ -16,8 +16,7 @@ namespace Assignement5.User_Control
 
         protected void btn_Login_Click(object sender, EventArgs e)
         {
-           // if(AD_username.Text=="TA" && AD_pass.Text==@"CSE445596ta!") 
-            if (AD_username.Text == "t" && AD_pass.Text == "t") 
+            if(AD_username.Text=="TA" && AD_pass.Text==@"CSE44558ta!") 
             Response.Redirect("~/Member_Pages/AdminMoniter.aspx");
             else
             {

@@ -73,10 +73,35 @@ namespace Assignement5.Member_Pages
                 }
             }
 
-            
 
 
 
+
+            try
+            {
+                Users currentUser;
+                HttpCookie storeCookies = Request.Cookies["BestBuyCookies"];
+                if (Session.Count != 0)
+                {
+                    if (!(storeCookies["Name"] == ""))
+                    {
+                        string catalogKey = "Users" + storeCookies["Name"];
+                        currentUser = (Users)Session[catalogKey];
+                        if (currentUser != null)
+                        {
+                            Label3.Text = currentUser._Address + "<br />" + currentUser._City + "<br />";
+                        }
+                    }
+                }
+                else
+                {
+                    Label3.Text = "Details Not Available";
+                }
+            }
+            catch
+            {
+                Label3.Text = "Details Not Available";
+            }
 
             //Product prod = (Product)Session["cartproduct"];
             //CartProdct.Text = prod.name;
@@ -198,13 +223,37 @@ namespace Assignement5.Member_Pages
 
         protected void BuyClicked_Click(object sender, EventArgs e)
         {
+            int parsedValue;
+          if (TextBox2.Text == "")
+            {
+                Label5.Text="Please Type your credit card number";
+            }
+          else if (!int.TryParse(TextBox2.Text, out parsedValue))
+          {
+              Label5.Text = "Type your Credit card number will not contain alphabets";
+          }
+            else if (TextBox2.Text.Length != 16)
+            {
+                Label5.Text = "Type your Credit card number as a 16 digit Numeral";
+            }
+     
+            else
+            {
+                GridView.DataSource = null;
+                GridView.DataBind();
+                Session["Products"] = null;
+                if (RadioButtonList1.SelectedIndex == 1)
+                {
+                    Session["BuyMode"] = "Online";
+                }
+                if (RadioButtonList1.SelectedIndex == 2)
+                {
+                    Session["BuyMode"] = "Pickup";
+                }
+                Response.Redirect("~/Member_Pages/FinalPage.aspx");
+            }
+
           
-            GridView.DataSource = null;
-            GridView.DataBind();
-            Session["Products"] = null;
-            Response.Redirect("ProductSelection.aspx");
-        
-        
         }
 
         protected void SignOutClick_Click(object sender, EventArgs e)
