@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Xml;
+using Assignement5.Classes;
 namespace Assignement5.User_Control
 {
     public partial class SignIn : System.Web.UI.UserControl
@@ -29,13 +30,16 @@ namespace Assignement5.User_Control
                    string fLocation = Path.Combine(Request.PhysicalApplicationPath, @"App_Data\Users.xml");
                     if (File.Exists(fLocation))
                     {
-                        XmlDocument Usersdoc = new XmlDocument();
+                    XmlDocument Usersdoc = new XmlDocument();
                     Usersdoc.Load(fLocation);
                     XmlNodeList Userlist = Usersdoc.GetElementsByTagName("User");
                     foreach (XmlNode user in Userlist)
                     {
-                        if (user.ChildNodes[0].InnerText == LG_username.Text && user.ChildNodes[1].InnerText == Library_hash_Encrypt.Hashing.HashPassword(LG_pass.Text))
+                        if (user.ChildNodes[0].InnerText == LG_username.Text && user.ChildNodes[1].InnerText == Library_hash_Encrypt.Hashing.HashPassword(LG_pass.Text) && user.LastChild.InnerText == "Member")
                        {
+                           Users newUser = new Users(user.ChildNodes[0].InnerText, user.ChildNodes[1].InnerText, user.ChildNodes[2].InnerText, user.ChildNodes[3].InnerText, user.ChildNodes[4].InnerText, user.ChildNodes[5].InnerText, user.ChildNodes[6].InnerText,user.ChildNodes[7].InnerText);
+                           string catalogKey = "Users" + user.ChildNodes[0].InnerText; // Form the index key for next session spot
+                           Session[catalogKey] = newUser; // Add an object into session stat
                            LG_result.Text = "Authentication Success";
                            LG_result.ForeColor = System.Drawing.Color.Green;
                            HttpCookie storeCookies = new HttpCookie("BestBuyCookies");

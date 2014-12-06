@@ -69,6 +69,7 @@
     <Content Include="Member_Pages\ProductSelection.aspx" />
     <None Include="Properties\PublishProfiles\Assignment5.pubxml" />
     <Content Include="Member_Pages\ReviewPage.aspx" />
+    <Content Include="Member_Pages\StaffPage.aspx" />
     <Content Include="Member_Pages\StoreLocation.aspx" />
     <None Include="Service References\GeocodingServices\configuration91.svcinfo" />
     <None Include="Service References\GeocodingServices\configuration.svcinfo" />
@@ -131,6 +132,7 @@
     <Content Include="User Control\RecommendedProd.ascx" />
     <Content Include="User Control\RegisterUser.ascx" />
     <Content Include="User Control\SignIn.ascx" />
+    <Content Include="User Control\Staff.ascx" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -178,6 +180,13 @@
     </Compile>
     <Compile Include="Member_Pages\ReviewPage.aspx.designer.cs">
       <DependentUpon>ReviewPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member_Pages\StaffPage.aspx.cs">
+      <DependentUpon>StaffPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member_Pages\StaffPage.aspx.designer.cs">
+      <DependentUpon>StaffPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Member_Pages\StoreLocation.aspx.cs">
       <DependentUpon>StoreLocation.aspx</DependentUpon>
@@ -245,6 +254,13 @@
     </Compile>
     <Compile Include="User Control\SignIn.ascx.designer.cs">
       <DependentUpon>SignIn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Staff.ascx.cs">
+      <DependentUpon>Staff.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User Control\Staff.ascx.designer.cs">
+      <DependentUpon>Staff.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

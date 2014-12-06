@@ -3,6 +3,7 @@
 <%@ Register TagPrefix="signIn" TagName="Login" Src="~/User Control/SignIn.ascx" %>
 <%@ Register TagPrefix="Register" TagName="Login1" Src="~/User Control/RegisterUser.ascx" %>
 <%@ Register TagPrefix="Admin" TagName="Login2" Src="~/User Control/Admin.ascx" %>
+<%@ Register TagPrefix="Staff" TagName="Login3" Src="~/User Control/Staff.ascx" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -28,7 +29,12 @@
                         </td>
                         <td>
                             <p style="align-self: center">
-                                <asp:Button ID="btn_Admin" runat="server" Text="Admin" Width="180px" OnClick="btn_Admin_Click" />
+                                <asp:Button ID="btn_Admin0" runat="server" Text="Admin" Width="180px" OnClick="btn_Admin_Click" />
+                            </p>
+                        </td>                      
+                          <td>
+                            <p style="align-self: center">
+                                <asp:Button ID="btn_Staff" runat="server" Text="Staff" Width="180px" OnClick="btn_Staff_Click" />
                             </p>
                         </td>
                     </tr>
@@ -42,6 +48,9 @@
             </asp:Panel>
             <asp:Panel runat="server" ID="AdminDiv" Visible="false">
                 <Admin:Login2 runat="server" />
+            </asp:Panel>
+                <asp:Panel runat="server" ID="StaffDiv" Visible="false">
+                <Staff:Login3 runat="server" />
             </asp:Panel>
 
         </ContentTemplate>

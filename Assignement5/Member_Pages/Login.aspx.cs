@@ -19,6 +19,7 @@ namespace Assignement5.Member_Pages
             SignIndiv.Visible = true;
             registexrDiv.Visible = false;
             AdminDiv.Visible = false;
+            StaffDiv.Visible = false;
         }
 
         protected void btn_Register_Click(object sender, EventArgs e)
@@ -26,6 +27,7 @@ namespace Assignement5.Member_Pages
             registexrDiv.Visible = true;
             SignIndiv.Visible = false;
             AdminDiv.Visible = false;
+            StaffDiv.Visible = false;
 
         }
 
@@ -34,7 +36,16 @@ namespace Assignement5.Member_Pages
             AdminDiv.Visible = true;
             SignIndiv.Visible = false;
             registexrDiv.Visible = false;
+            StaffDiv.Visible = false;
 
+        }
+
+        protected void btn_Staff_Click(object sender, EventArgs e)
+        {
+            AdminDiv.Visible = false;
+            SignIndiv.Visible = false;
+            registexrDiv.Visible = false;
+            StaffDiv.Visible = true;
         }
     }
 }
